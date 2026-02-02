@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="button" >
+            <button id="button1" onclick="main()">NewsMania</button>
+        </div>
+        <div id="button">
+            <button id="button1" onclick="about()">About</button>
+        </div>
+    </div>
+    <div id="box" style="display:none">
+        <p>"NewsMania is a responsive news aggregation website built using HTML, CSS, and JavaScript that displays real-time news headlines from multiple trusted sources"</p>
+    </div>
+    <div id="news">
+        <div class="news1">
+            <h1>BBC News</h1>
+            <ul id="bbc-news"></ul>
+        </div>
+        <div class="news1">
+            <h1>CNN News</h1>
+            <ul id="cnn-news"></ul>
+        </div>
+        <div class="news1">
+            <h1>Financial Times</h1>
+            <ul id="sports-news"></ul>
+        </div>
+        <div class="news1">
+            <h1>Tech Crunch</h1>
+            <ul id="tc-news"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

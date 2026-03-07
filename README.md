@@ -22,3 +22,12 @@ DOM-based dynamic rendering updates news content without reloading the page.<br>
 Optimized UI for both mobile and desktop devices.<br></br>
 </ul>
 <hr>
+
+🛠️ Tech Stack
+<ul>
+<li>React.js – Frontend framework</li>
+<li>Tailwind CSS – Styling and responsive design</li>
+<li>Node.js – Runtime environment</li>
+<li>Express.js – Backend API handling</li>
+</ul>
+<hr>

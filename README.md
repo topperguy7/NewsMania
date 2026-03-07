@@ -9,6 +9,7 @@ NewsMania is a dynamic news web application that fetches and displays real-time 
 <li>📰 Top Headlines</li>
 Displays the latest news headlines from multiple channels.<br>
 
+
 <li>📂 Category-Based News</li>
 Users can browse news by categories such as Technology, Business, Sports, Entertainment, etc.
 

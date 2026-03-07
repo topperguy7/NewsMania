@@ -44,4 +44,18 @@ Create a .env file in the root directory and add your API key:
 
 Clone the repository:
 
-    git clone https://github.com/topperguy7/newsmania.git
+    git clone https://github.com/topperguy7/NewsMania.git
+Navigate to the project folder:
+
+        cd NewsMania
+Install dependencies:
+
+        npm install
+Start the development server:
+
+        npm run dev
+<hr>
+
+📄 License
+
+This project is open-source and available under the MIT License.

@@ -56,6 +56,11 @@ Start the development server:
         npm run dev
 <hr>
 
+## 🖼️ Preview
+
+![App Screenshot](Screenshot-1.png)
+<hr>
+
 📄 License
 
 This project is open-source and available under the MIT License.

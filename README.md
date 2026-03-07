@@ -19,7 +19,7 @@ Fetches live news data using a third-party News API.<br></br>
 DOM-based dynamic rendering updates news content without reloading the page.<br></br>
 
 <li>📱 Fully Responsive Design</li>
-Optimized UI for both mobile and desktop devices.<br></br>
+Optimized UI for both mobile and desktop devices.
 </ul>
 <hr>
 

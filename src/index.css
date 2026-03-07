@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  font-family: system-ui, 'Helvetica Neue', sans-serif;
+}
+
+:root{
+  --bg: white;
+  --text: black;
+  --bg1: rgba(128, 128, 128, 0.782);
+  --bg2: rgb(229, 231, 235);
+  --bg3: rgb(229, 231, 235);
+  --text1: rgb(55, 116, 191);
+}
+
+.dark{
+  --bg: black;
+  --text: white;
+  --bg1: rgb(7, 7, 113);
+  --bg2: rgba(40, 38, 38, 0.7);
+  --bg3: black;
+  --text1: blue;
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.mania{
+  position: relative;
+  animation: changeColor 5s infinite;
+}
+
+@keyframes changeColor{
+  0%, 100%{ color: hsl(0, 100%, 80%);}
+  10%{ color: hsl(0, 100%, 80%);}
+  20%{ color: hsl(0, 100%, 70%);}
+  30%{ color: hsl(0, 100%, 60%);}
+  40%{ color: hsl(0, 100%, 50%);}
+  50%{ color: hsl(0, 100%, 54%);}
+  60%{ color: hsl(0, 100%, 44%);}
+  70%{ color: hsl(0, 100%, 34%);}
+  80%{ color: hsl(0, 100%, 24%);}
+  90%{ color: hsl(0, 100%, 14%);}
+}
+
+.mania-text {
+  position: absolute;
+  top: 2%;
+  left: 28%;
+  
+  font-size: 14px;
+  text-align: center;
+  
+  padding: 6px;
+  width: 140px;
+  border: 1px solid var(--bg1);
+  background-color: var(--bg2);
+  border-radius: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+}
+
+.mania:hover ~ .mania-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-r{
+  display: flex;
+  gap: 40px;
+}
+
+.nav-r a{
+  border-bottom: 1px solid transparent;
+}
+
+.nav-r a:hover{
+  text-shadow: 0 0 10px red;
+  border-bottom: 1px solid red;
+}
+
+.nav-r button{
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-r button:hover{
+  transform: translateY(-4px);
+}
+
+.nav-r button:active{
+  transform: translateY(0px);
+}
+
+.marquee {
+  overflow: hidden;
+  background: var(--bg1);
+  color: var(--text);
+  padding: 8px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-content {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.news{
+  background-color: var(--bg2);
+  padding: 20px;
+
+  border: 1px solid var(--bg1);
+  border-radius: 20px;
+
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.news a:hover{
+  color: var(--text1);
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 800px;
+  background-color: var(--bg3);
+  box-shadow: 0px 10p 15px rgba(0, 0, 0, 0.5);
+
+  border: 2px solid var(--bg1);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.modal-top{
+  text-align: center;
+  position: relative;
+}
+
+.modal-top h1{
+  font-size: 3rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--bg1);
+
+  padding: 8px;
+}
+
+.modal-top button{
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-bot{
+  padding: 10px;
+}
+
+.modal-bot li{
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 12px 0px;
+}
+
+.modal-bot li:hover{
+  color: var(--text1);
+}
+
+.modal-top button:hover{
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px){
+  .news{
+    margin: 20px auto;
+  }
+}

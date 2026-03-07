@@ -10,15 +10,15 @@ NewsMania is a dynamic news web application that fetches and displays real-time 
 Displays the latest news headlines from multiple channels.<br></br>
 
 <li>📂 Category-Based News</li>
-Users can browse news by categories such as Technology, Business, Sports, Entertainment, etc.
+Users can browse news by categories such as Technology, Business, Sports, Entertainment, etc.<br></br>
 
 <li>⚡ Real-Time News Fetching</li>
-Fetches live news data using a third-party News API.
+Fetches live news data using a third-party News API.<br></br>
 
 <li>🧠 Dynamic Rendering</li>
-DOM-based dynamic rendering updates news content without reloading the page.
+DOM-based dynamic rendering updates news content without reloading the page.<br></br>
 
 <li>📱 Fully Responsive Design</li>
-Optimized UI for both mobile and desktop devices.
+Optimized UI for both mobile and desktop devices.<br></br>
 </ul>
 <hr>

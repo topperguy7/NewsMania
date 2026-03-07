@@ -31,3 +31,17 @@ Optimized UI for both mobile and desktop devices.
 <li>Express.js – Backend API handling</li>
 </ul>
 <hr>
+
+🔑 Environment Variables
+
+Create a .env file in the root directory and add your API key:
+
+    NEWS_API_KEY=your_api_key_here
+⚠️ Make sure .env is included in .gitignore to keep your API key secure.
+<hr>
+
+📦 Installation
+
+Clone the repository:
+
+    git clone https://github.com/topperguy7/newsmania.git

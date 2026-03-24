@@ -97,6 +97,24 @@ body{
   transform: translateY(0px);
 }
 
+.nav-r-2{
+  display: none;
+  gap: 10px;
+}
+
+.nav-r-2 button{
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-r-2 button:hover{
+  transform: translateY(-4px);
+}
+
+.nav-r-2 button:active{
+  transform: translateY(0px);
+}
+
 .marquee {
   overflow: hidden;
   background: var(--bg1);
@@ -198,5 +216,46 @@ body{
 @media (max-width: 768px){
   .news{
     margin: 20px auto;
+  }
+
+  .nav-r{
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-r.flex{
+    display: flex;
+  }
+
+  .nav-r button{
+    display: none;
+  }
+
+  .nav-r-2{
+    display: flex;
+  }
+
+  .modal{
+    width: 360px;
+    height: 500px;
+  }
+
+  .modal-top h1{
+    font-size: 2rem;
+    padding: 4px;
+  }
+
+  .modal-top button{
+    font-size: 2rem;
+  }
+
+  .modal-bot{
+    padding: 4px;
+  }
+
+  .modal-bot li{
+    font-size: 1rem;
+    padding: 4px;
   }
 }

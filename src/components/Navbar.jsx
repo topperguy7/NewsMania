@@ -6,6 +6,8 @@ function Navbar({ darkMode, setDarkMode}) {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [searchIcon, setSearchIcon] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const fetchCategory = async (category) => {
     try {
@@ -39,11 +41,20 @@ function Navbar({ darkMode, setDarkMode}) {
           <p className="mania-text">NewsMania is News aggregator website</p>
         </div>
 
-        <div>
-          <input type="text" placeholder="Search news..." className="search-input" />
+        <div className='relative'>
+          <button className='md:hidden' onClick={() => {setSearchIcon(!searchIcon)}}>
+            🔍
+          </button>
+
+          <input type="text" placeholder="Search news..." className="hidden md:block" />
+
+          {searchIcon && (<input type="text" placeholder="Search news..." className="md:hidden fixed top-20 left-20 border-2 rounded-md border-red-500 mt-4 shadow-xl text-2xl" />)}
         </div>
 
-        <div className="nav-r">
+        <div className={`nav-r ${
+          menuOpen ? "flex absolute top-20 right-5 bg-sky-400 p-4 rounded-lg shadow-lg flex-col gap-3" : ""
+        }`}
+        >
 
           {["business", "general", "entertainment", "sports", "technology"].map((cat) => (
             <a
@@ -58,6 +69,13 @@ function Navbar({ darkMode, setDarkMode}) {
             </a>
           ))}
 
+          <button onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+        </div>
+
+        <div className='nav-r-2'>
+          <button onClick={() => setMenuOpen(!menuOpen)}>☰</button>
           <button onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "☀️" : "🌙"}
           </button>

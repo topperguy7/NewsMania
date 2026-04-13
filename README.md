@@ -63,11 +63,11 @@ A fully responsive design featuring Dark Mode, smooth transitions, and mobile-op
 
 NewsMania prioritizes user security by implementing a Stateless Authentication flow:
 
-Encryption: User passwords are encrypted using Bcrypt.js before being stored in MongoDB.
+1. Encryption: User passwords are encrypted using Bcrypt.js before being stored in MongoDB.
 
-JWT Verification: Upon login, a JWT is generated and stored in a secure HttpOnly cookie.
+2. JWT Verification: Upon login, a JWT is generated and stored in a secure HttpOnly cookie.
 
-Route Guarding: The checkToken middleware intercepts requests to sensitive routes (like /search), ensuring only valid, authenticated users can access the data.
+3. Route Guarding: The checkToken middleware intercepts requests to sensitive routes (like /search), ensuring only valid, authenticated users can access the data.
 <hr>
 
 ## 🖼️ Preview

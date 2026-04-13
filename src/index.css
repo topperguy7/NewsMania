@@ -11,6 +11,7 @@
   --bg1: rgba(128, 128, 128, 0.782);
   --bg2: rgb(229, 231, 235);
   --bg3: rgb(229, 231, 235);
+  --bg4: rgb(128, 128, 128);
   --text1: rgb(55, 116, 191);
 }
 
@@ -20,6 +21,7 @@
   --bg1: rgb(7, 7, 113);
   --bg2: rgba(40, 38, 38, 0.7);
   --bg3: black;
+  --bg4: rgb(7, 7, 113);
   --text1: blue;
 }
 
@@ -72,7 +74,7 @@ body{
 
 .nav-r{
   display: flex;
-  gap: 40px;
+  gap: 25px;
 }
 
 .nav-r a{
@@ -213,6 +215,19 @@ body{
   transform: scale(1.08);
 }
 
+.auth{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 2px solid var(--bg1);
+  border-radius: 10px;
+  padding: 20px 30px;
+
+  font-size: 2rem;
+}
+
 @media (max-width: 768px){
   .news{
     margin: 20px auto;
@@ -257,5 +272,10 @@ body{
   .modal-bot li{
     font-size: 1rem;
     padding: 4px;
+  }
+
+  .auth{
+    font-size: 1.3rem;
+    padding: 8px 14px;
   }
 }

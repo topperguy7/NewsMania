@@ -74,11 +74,13 @@ NewsMania prioritizes user security by implementing a Stateless Authentication f
 
 ## Prerequisites ##
 
+<ul>
 <li>Node.js (v24.x recommended): Developed and tested on Node v24.</li>
 
 <li>MongoDB Atlas: Account or a local MongoDB instance.</li>
 
 <li>News API Key: Obtain one from newsapi.org.</li>
+</ul>
 
 1. Environment Configuration
 

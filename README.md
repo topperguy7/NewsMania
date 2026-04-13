@@ -80,6 +80,39 @@ NewsMania prioritizes user security by implementing a Stateless Authentication f
 
 <li>News API Key: Obtain one from newsapi.org.</li>
 
+1. Environment Configuration
+
+Create a .env file in the news-backend directory and populate it with your credentials:
+
+    PORT=5000
+    MONGODB_URI=your_mongodb_connection_string
+    JWT_SEC=your_custom_secret_key
+    NEWS_API_KEY=your_api_key_from_newsapi
+    NODE_ENV=development
+
+2. Backend Initialization
+
+        # Navigate to backend directory
+        cd news-backend
+
+        # Install dependencies
+        npm install
+
+        # Launch the server
+        npm start
+
+3. Frontend Initialization
+
+       # Return to the root directory
+        cd ..
+
+        # Install dependencies
+        npm install
+
+        # Start the Vite development server
+        npm run dev
+<hr>
+
 ## 🖼️ Preview
 
 ![App Screenshot](Screenshot-1.png)

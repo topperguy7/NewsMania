@@ -1,6 +1,6 @@
 📰 NewsMania – News Aggregator Web Application
 
-NewsMania is a dynamic news web application that fetches and displays real-time news headlines from multiple news sources using a third-party News API. The platform allows users to browse top headlines and explore news articles organized by different categories through a responsive and interactive interface.
+NewsMania is a high-performance, full-stack news aggregator that delivers real-time global headlines through a sleek, responsive interface. Built with the MERN stack (MongoDB, Express, React, Node), it features secure JWT-based authentication and restricted premium features like deep-search functionality.
 <hr>
 
 🚀 Features
@@ -12,23 +12,32 @@ Displays the latest news headlines from multiple channels.<br></br>
 <li>📂 Category-Based News</li>
 Users can browse news by categories such as Technology, Business, Sports, Entertainment, etc.<br></br>
 
+<li>🔍 Gated Search Functionality</li>
+An advanced search feature restricted to registered users via backend middleware protection.<br></br>
+
 <li>⚡ Real-Time News Fetching</li>
-Fetches live news data using a third-party News API.<br></br>
+Seamless integration with third-party News APIs to provide the latest breaking news.<br></br>
 
 <li>🧠 Dynamic Rendering</li>
 DOM-based dynamic rendering updates news content without reloading the page.<br></br>
 
+<li>🔐 Secure Membership</li>
+Complete authentication system using JSON Web Tokens (JWT) and HttpOnly Cookies to protect user sessions.<br></br>
+
+<li>🛡️ Password-Protected Account Actions</li>
+High-stakes operations (such as account deletion or profile updates) require secondary password verification using Bcrypt re-authentication to prevent unauthorized changes.
+
 <li>📱 Fully Responsive Design</li>
-Optimized UI for both mobile and desktop devices.
+A fully responsive design featuring Dark Mode, smooth transitions, and mobile-optimized navigation built with Tailwind CSS.
 </ul>
 <hr>
 
 🛠️ Tech Stack
 <ul>
-<li>React.js – Frontend framework</li>
-<li>Tailwind CSS – Styling and responsive design</li>
-<li>Node.js – Runtime environment</li>
-<li>Express.js – Backend API handling</li>
+<li>Frontend – React.js, Vite, Tailwind CSS, Lucide Icons / svg</li>
+<li>Backend – Node.js, Express.js</li>
+<li>Database – MongoDB, Mongoose</li>
+<li>Auth – JWT (JSON Web Tokens), Cookie-Parser, Bcrypt.js</li>
 </ul>
 <hr>
 

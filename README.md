@@ -70,6 +70,16 @@ NewsMania prioritizes user security by implementing a Stateless Authentication f
 3. Route Guarding: The checkToken middleware intercepts requests to sensitive routes (like /search), ensuring only valid, authenticated users can access the data.
 <hr>
 
+⚙️ Installation & Setup
+
+## Prerequisites ##
+
+<li>Node.js (v24.x recommended): Developed and tested on Node v24.</li>
+
+<li>MongoDB Atlas: Account or a local MongoDB instance.</li>
+
+<li>News API Key: Obtain one from newsapi.org.</li>
+
 ## 🖼️ Preview
 
 ![App Screenshot](Screenshot-1.png)

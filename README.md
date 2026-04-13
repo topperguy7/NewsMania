@@ -25,7 +25,7 @@ DOM-based dynamic rendering updates news content without reloading the page.<br>
 Complete authentication system using JSON Web Tokens (JWT) and HttpOnly Cookies to protect user sessions.<br></br>
 
 <li>🛡️ Password-Protected Account Actions</li>
-High-stakes operations (such as account deletion or profile updates) require secondary password verification using Bcrypt re-authentication to prevent unauthorized changes.
+High-stakes operations (such as account deletion or profile updates) require secondary password verification using Bcrypt re-authentication to prevent unauthorized changes.<br></br>
 
 <li>📱 Fully Responsive Design</li>
 A fully responsive design featuring Dark Mode, smooth transitions, and mobile-optimized navigation built with Tailwind CSS.
@@ -41,28 +41,33 @@ A fully responsive design featuring Dark Mode, smooth transitions, and mobile-op
 </ul>
 <hr>
 
-🔑 Environment Variables
+📂 Project Folder
 
-Create a .env file in the root directory and add your API key:
-
-    NEWS_API_KEY=your_api_key_here
-⚠️ Make sure .env is included in .gitignore to keep your API key secure.
+    NEWSMANIA
+    ├── news-backend/          # RESTful API Server
+    │   ├── src/
+    │   │   ├── config/        # Database & Environment configurations
+    │   │   ├── controllers/   # Request handlers (Auth, News, Search)
+    │   │   ├── middleware/    # Auth guards & Route protection
+    │   │   ├── models/        # Database Schemas (User profiles)
+    │   │   └── routes/        # API endpoint definitions
+    │   └── server.js          # Backend entry point
+    ├── src/                   # React Frontend (Vite)
+    │   ├── components/        # Reusable UI (Navbar, Content, Modals)
+    │   ├── App.jsx            # State management & Routing
+    │   └── main.jsx           # Client entry point
+    └── .env                   # Sensitive configuration
 <hr>
 
-📦 Installation
+🛡️ Security & Authentication
 
-Clone the repository:
+NewsMania prioritizes user security by implementing a Stateless Authentication flow:
 
-    git clone https://github.com/topperguy7/NewsMania.git
-Navigate to the project folder:
+Encryption: User passwords are encrypted using Bcrypt.js before being stored in MongoDB.
 
-        cd NewsMania
-Install dependencies:
+JWT Verification: Upon login, a JWT is generated and stored in a secure HttpOnly cookie.
 
-        npm install
-Start the development server:
-
-        npm run dev
+Route Guarding: The checkToken middleware intercepts requests to sensitive routes (like /search), ensuring only valid, authenticated users can access the data.
 <hr>
 
 ## 🖼️ Preview

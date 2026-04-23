@@ -52,9 +52,11 @@ function Navbar({ darkMode, setDarkMode}) {
     };
 
     try{
+      setSearchData([]);
       setOpenSer(true);
-      const res = await fetch(`http://localhost:5000/api/search/${query}`);
+      const res = await fetch(`http://localhost:5000/api/search/${encodeURIComponent(query)}` , { credentials: 'include'});
       const result = await res.json();
+      console.log(result);
       setSearchData(result.data || []);
       setSearchBar(false);
       setQuery("");
@@ -146,6 +148,23 @@ function Navbar({ darkMode, setDarkMode}) {
       console.error("Error:", err.message);
     };
   };
+
+  useEffect(() => {
+    const checkLogin = async () => {
+      try{
+        const res = await fetch('http://localhost:5000/api/auth/isLogin', {credentials: 'include'});
+        const result = res.json();
+
+        if(res.ok){
+          setIsLogin(true);
+        };
+      } catch(err){
+        console.error("Error:", err);
+      }
+    };
+
+    checkLogin();
+  }, []);
 
   return (
     <>
@@ -342,7 +361,7 @@ function Navbar({ darkMode, setDarkMode}) {
             <input type='password' placeholder='password' required name='password' onChange={handleChangeS} className='placeholder-[var(--text)] border rounded-md'/>
 
             <button className='border px-2 rounded-lg bg-[var(--bg3)] cursor-pointer active:scale-97 transition duration-200'>Submit</button>
-            <h1>Want to Login?<button onClick={() => {setOpenSign(false); setOpenLogin(true); }} className='underline cursor-pointer'>Login</button></h1>
+            <h1>Want to Login?<button type='button' onClick={() => {setOpenSign(false); setOpenLogin(true); }} className='underline cursor-pointer'>Login</button></h1>
           </form>
         </div>
       )}
@@ -360,7 +379,7 @@ function Navbar({ darkMode, setDarkMode}) {
             <input type='password' placeholder='password' required name='password' onChange={handleChangeL} className='placeholder-[var(--text)] border rounded-md'/>
 
             <button className='border px-2 rounded-lg bg-[var(--bg3)] cursor-pointer active:scale-97 transition duration-200'>Submit</button>
-            <h1>Want to Sign In?<button onClick={() => {setOpenLogin(false); setOpenSign(true); }} className='underline cursor-pointer'>Sign In</button></h1>
+            <h1>Want to Sign In?<button type='button' onClick={() => {setOpenLogin(false); setOpenSign(true); }} className='underline cursor-pointer'>Sign In</button></h1>
           </form>
         </div>
       )}

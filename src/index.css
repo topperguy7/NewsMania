@@ -5,6 +5,10 @@
   font-family: system-ui, 'Helvetica Neue', sans-serif;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 :root{
   --bg: white;
   --text: black;

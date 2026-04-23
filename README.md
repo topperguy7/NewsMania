@@ -42,6 +42,7 @@ A fully responsive design featuring Dark Mode, smooth transitions, and mobile-op
 <li>Frontend – React.js, Vite, Tailwind CSS, Lucide Icons / svg</li>
 <li>Backend – Node.js, Express.js</li>
 <li>Database – MongoDB, Mongoose</li>
+<li>AI & Scraped Data - Gemini API, Cheerio (HTML Parsing & Text Extraction)</li>
 <li>Auth – JWT (JSON Web Tokens), Cookie-Parser, Bcrypt.js</li>
 </ul>
 <hr>
@@ -96,6 +97,7 @@ Create a .env file in the news-backend directory and populate it with your crede
     JWT_SEC=your_custom_secret_key
     NEWS_API_KEY=your_api_key_from_newsapi
     NODE_ENV=development
+    API_KEY=your_Gemini_API_KEY
 
 2. Backend Initialization
 

@@ -1,6 +1,8 @@
 📰 NewsMania – News Aggregator Web Application
 
-NewsMania is a high-performance, full-stack news aggregator that delivers real-time global headlines through a sleek, responsive interface. Built with the MERN stack (MongoDB, Express, React, Node), it features secure JWT-based authentication and restricted premium features like deep-search functionality.
+NewsMania is a high-performance, full-stack news aggregator designed for the modern information consumer. By leveraging the MERN stack (MongoDB, Express, React, Node.js), NewsMania delivers a seamless, real-time experience, pulling global headlines into a single, intuitive interface.
+
+The platform bridges the gap between massive data streams and user readability. Beyond just aggregation, NewsMania prioritizes security and intelligence—implementing JWT-based authentication for protected user sessions and AI-driven synthesis to help users digest complex reporting instantly. Whether you are looking for a deep dive via our gated search or a quick brief via AI, NewsMania is built for speed, security, and clarity.
 <hr>
 
 🚀 Features
@@ -8,6 +10,9 @@ NewsMania is a high-performance, full-stack news aggregator that delivers real-t
 <ul>
 <li>📰 Top Headlines</li>
 Displays the latest news headlines from multiple channels.<br></br>
+
+<li>🤖 AI-Powered Quick-Scan</li>
+Get the gist without the grind. Users can click any article to generate a 4-bullet point AI summary, providing a concise overview of complex stories in seconds.
 
 <li>📂 Category-Based News</li>
 Users can browse news by categories such as Technology, Business, Sports, Entertainment, etc.<br></br>

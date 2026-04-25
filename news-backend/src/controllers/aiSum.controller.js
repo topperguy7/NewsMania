@@ -6,7 +6,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY});
 async function Summarize(articleText){
   const response = await ai.models.generateContent({
     model: 'gemini-2.0-flash-lite',
-    contents: `Summarize the article at this URL in exactly 4 bullet points: ${articleText}`
+    contents: `Summarize this article in exactly 4 bullet points: ${articleText}`
   });
 
   return response.text;

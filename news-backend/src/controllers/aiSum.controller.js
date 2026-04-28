@@ -47,23 +47,22 @@ async function AISummary(req, res){
 
     const summary = await Summarize(articleText);
 
-    console.log(summary);
-
-    if(summary.error || !summary.choices || summary.choices.length === 0){
-      return res.status(500).json({
-        message: "No response from AI"
-      });
-    };
-
     res.status(200).json({
       message: 'summary fetched successfully',
       summary: summary
     });
   } catch(err){
+    if(err.status === 429 || err.message?.includes('429')){
+      return res.status(429).json({
+        message: "Gemini API rate limit exceeded. Please wait a moment before trying again."
+      });
+    };
+
     console.error("Error:", err);
+
     res.status(500).json({
-      message: "Server error"
-    })
+      message: "AI Failed to Generate response"
+    });
   }
 };
 

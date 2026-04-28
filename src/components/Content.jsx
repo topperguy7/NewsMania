@@ -45,8 +45,15 @@ function Content() {
 
       const result = await res.json();
 
+      if(res.status === 429){
+        setSummary(`${result.message || "Gemini API rate limit exceeded. Please wait a moment before trying again."}`);
+        setSummaryLoading(false);
+        return;
+      };
+
       if(!res.ok){
-        setSummary("Login to use AI summary");
+        const errorMsg = res.status = 401 ? "Login to use AI Summary" : (result.message || "Something went wrong")
+        setSummary(errorMsg);
         setSummaryLoading(false);
         return;
       };
